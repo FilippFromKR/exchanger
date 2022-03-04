@@ -3,6 +3,7 @@ package com.example.alpha_bank_t.code.staticClasses;
 import com.example.alpha_bank_t.code.dbEntityes.Currency;
 import com.example.alpha_bank_t.code.dbEntityes.Operation;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Ignore
 class CalculatorCourseTest {
 
     @Test

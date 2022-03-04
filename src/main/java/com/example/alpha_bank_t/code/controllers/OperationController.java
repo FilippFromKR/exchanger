@@ -60,15 +60,15 @@ public class OperationController {
     }
 
 
-//
-//    @RequestMapping(value = "/**", method = {
-//            RequestMethod.POST,
-//            RequestMethod.GET,
-//            RequestMethod.DELETE,
-//            RequestMethod.PATCH})
-//    public ResponseEntity<String> notFound() {
-//        return new ResponseEntity<>("Sorry, we didn't find anything", HttpStatus.NOT_FOUND);
-//    }
+
+    @RequestMapping(value = "/**", method = {
+            RequestMethod.POST,
+            RequestMethod.GET,
+            RequestMethod.DELETE,
+            RequestMethod.PATCH})
+    public ResponseEntity<String> notFound() {
+        return new ResponseEntity<>("Sorry, we didn't find anything", HttpStatus.NOT_FOUND);
+    }
 
     @ApiOperation(value = "Начало работы и получение текущего курса валют"
             ,response = CurrantCourses.class)
@@ -167,7 +167,7 @@ public class OperationController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Operation>> filterOperationByPhone(@PathVariable String phoneNumber) {
         List<Operation> operations = operationService.findByPhoneNumber(phoneNumber);
-        if (operations == null || operations.get(0).getExceptionMessage() != null)
+        if (operations == null || operations.iterator().next().getExceptionMessage() != null)
             return new ResponseEntity<>(operations, HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(operations, HttpStatus.OK);
     }

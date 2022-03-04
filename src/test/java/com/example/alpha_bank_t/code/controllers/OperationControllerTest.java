@@ -4,11 +4,10 @@ import com.example.alpha_bank_t.code.dbEntityes.CurrantCourses;
 import com.example.alpha_bank_t.code.dbEntityes.Currency;
 import com.example.alpha_bank_t.code.dbEntityes.Operation;
 import com.example.alpha_bank_t.code.domains.DateFilter;
-import com.example.alpha_bank_t.code.repositoryes.OperationRepository;
 import com.example.alpha_bank_t.code.services.CourseService;
 import com.example.alpha_bank_t.code.services.OperationService;
-import com.example.alpha_bank_t.code.services.ParsingService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentMatchers;
@@ -38,6 +37,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @RunWith(SpringRunner.class)
 @SpringBootTest()
 @AutoConfigureMockMvc
+@Ignore
 class OperationControllerTest {
 
 

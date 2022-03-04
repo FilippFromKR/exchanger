@@ -1,0 +1,15 @@
+ version: '3'
+ services:
+#  h2:
+#    image: 'pgstyle/h2db'
+#    container_name: 'h2_java'
+#    entrypoint:
+#      - 'H2_USER=sa'
+#      - 'H2_HOST_AUTH_METHOD=trust'
+#      - 'H2_DB=testdb'
+  app:
+   build: ./
+   container_name: 'java_app'
+   ports:
+    - "9966:9966"
+
